@@ -3,6 +3,7 @@ before_action :correct_user, only: [:edit]
   def show
     @book = Book.new
     @booka = Book.find(params[:id])
+    @book_comment = BookComment.new
     @user = User.find(current_user[:id])
     @user = @booka.user
 
